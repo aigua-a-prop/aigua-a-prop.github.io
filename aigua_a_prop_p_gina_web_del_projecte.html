@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Bàsic i Metadades per a cercadors -->
+    <title>Aigua a Prop | Aigua potable, filtres i sanejament a Tarragona</title>
+    <meta name="description" content="Aigua a Prop: Projecte social i educatiu a Tarragona (Parc Central) per portar aigua potable, filtres, dipòsits, transport segur i educació en sanejament a comunitats vulnerables.">
+    <meta name="keywords" content="Aigua a Prop, aigua potable, filtres d'aigua, dipòsits, sanejament, Tarragona, Parc Central, ODS 6, projecte escolar, Yasser Akka, Daniel Soler, solidaritat">
+    <meta name="author" content="Yasser Akka i Daniel Soler (3r A)">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c4a6e">
+
+    <!-- Open Graph per compartir a xarxes socials i WhatsApp -->
+    <meta property="og:title" content="Aigua a Prop | L'aigua que t'acosta a la vida">
+    <meta property="og:description" content="L'aigua potable, un dret per a tothom. Descobreix el projecte educatiu d'Aigua a Prop: filtres, dipòsits, transport segur i educació en sanejament.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ca_ES">
+    <meta property="og:site_name" content="Aigua a Prop">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aigua a Prop | Aigua potable, filtres i sanejament a Tarragona">
+    <meta name="twitter:description" content="Una proposta educativa per portar aigua segura a qui més ho necessita. Projecte de Yasser Akka i Daniel Soler (3r A).">
+
+    <!-- Dades estructurades JSON-LD (Schema.org) per millorar el posicionament a Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Aigua a Prop",
+      "alternateName": "Projecte Aigua a Prop Tarragona",
+      "description": "Projecte escolar i proposta social per portar aigua potable segura, instal·lació de filtres i dipòsits, transport d'emergència i educació en sanejament a comunitats vulnerables.",
+      "slogan": "L'aigua que t'acosta a la vida.",
+      "founder": [
+        { "@type": "Person", "name": "Yasser Akka" },
+        { "@type": "Person", "name": "Daniel Soler" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer del Cardenal Vidal i Barraquer, 15 - 17, Centre Comercial Parc Central, Planta -1",
+        "addressLocality": "Tarragona",
+        "postalCode": "43005",
+        "addressCountry": "ES"
+      },
+      "areaServed": "Comunitats rurals, escoles locals i centres de salut vulnerables",
+      "knowsAbout": [
+        "Aigua potable",
+        "Instal·lació de filtres i dipòsits",
+        "Transport segur d'aigua en emergències",
+        "Sanejament i higiene",
+        "Objectius de Desenvolupament Sostenible (ODS 6)"
+      ]
+    }
+    </script>
+
+    <!-- Tipografia moderna: Plus Jakarta Sans i Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN i configuració personalitzada -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        ocean: {
+                            950: '#082f49',
+                            900: '#0c4a6e',
+                            800: '#075985',
+                            700: '#0369a1',
+                            600: '#0284c7',
+                        },
+                        aqua: {
+                            500: '#06b6d4',
+                            400: '#22d3ee',
+                            100: '#cffafe',
+                            50: '#f0f9ff',
+                        }
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        waveSlide: {
+                            '0%': { transform: 'translateX(0)' },
+                            '50%': { transform: 'translateX(-25px)' },
+                            '100%': { transform: 'translateX(0)' },
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '0.65', transform: 'scale(1)' },
+                            '50%': { opacity: '1', transform: 'scale(1.06)' },
+                        }
+                    },
+                    animation: {
+                        float: 'float 5.5s ease-in-out infinite',
+                        waveSlide: 'waveSlide 9s ease-in-out infinite',
+                        waveSlideSlow: 'waveSlide 14s ease-in-out infinite reverse',
+                        pulseSoft: 'pulseSoft 3.5s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-cyan-200 selection:text-ocean-900">
+
+    <!-- =========================================================
+         1. BARRA DE NAVEGACIÓ ENGANXOSA (STICKY GLASSMORPHISM)
+         ========================================================= -->
+    <header id="navbar" class="sticky top-0 z-50 bg-white/85 backdrop-blur-lg border-b border-sky-100/90 transition-shadow duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-18 py-3">
+                <!-- Logotip -->
+                <a href="#inici" class="flex items-center gap-3 group focus:outline-none rounded-xl p-1">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-ocean-900 via-ocean-600 to-aqua-500 flex items-center justify-center shadow-md shadow-sky-500/25 group-hover:scale-105 transition-transform duration-300">
+                        <!-- Icona SVG gota d'aigua -->
+                        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2.5C12 2.5 5.5 9.8 5.5 14.5C5.5 18.09 8.41 21 12 21C15.59 21 18.5 18.09 18.5 14.5C18.5 9.8 12 2.5 12 2.5Z" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.5 15.2C9.5 16.58 10.62 17.7 12 17.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="block font-display font-extrabold text-lg text-ocean-900 tracking-tight">Aigua a Prop</span>
+                        <span class="block text-[11px] font-medium text-sky-600 uppercase tracking-wider">Projecte Educatiu · 3r A</span>
+                    </div>
+                </a>
+
+                <!-- Enllaços de navegació (Escriptori) -->
+                <nav class="hidden lg:flex items-center gap-1" aria-label="Navegació principal">
+                    <a href="#inici" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-ocean-700 hover:bg-sky-50 transition-colors">Inici</a>
+                    <a href="#qui-som" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-ocean-700 hover:bg-sky-50 transition-colors">Qui som?</a>
+                    <a href="#productes-serveis" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-ocean-700 hover:bg-sky-50 transition-colors">Productes i Serveis</a>
+                    <a href="#organitzacio" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-ocean-700 hover:bg-sky-50 transition-colors">Com treballem</a>
+                    <a href="#impacte" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-ocean-700 hover:bg-sky-50 transition-colors">Impacte</a>
+                    <a href="#ubicacio" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-ocean-700 hover:bg-sky-50 transition-colors">Ubicació</a>
+                </nav>
+
+                <!-- Botó CTA i Menú Mòbil -->
+                <div class="flex items-center gap-2">
+                    <a href="#simulador" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-ocean-600 to-aqua-500 text-white font-semibold text-sm shadow-md shadow-cyan-500/25 hover:shadow-lg hover:shadow-cyan-500/35 hover:-translate-y-0.5 transition-all duration-200">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/>
+                        </svg>
+                        <span>Simula l'impacte</span>
+                    </a>
+
+                    <!-- Botó Hamburguesa Mòbil -->
+                    <button id="mobile-menu-btn" type="button" aria-label="Obrir menú de navegació" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2.5 rounded-xl text-ocean-900 bg-sky-50 hover:bg-sky-100 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500">
+                        <svg id="menu-icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <svg id="menu-icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú desplegable mòbil -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-t border-sky-100 shadow-xl">
+            <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1.5" aria-label="Navegació mòbil">
+                <a href="#inici" class="mobile-nav-link px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-ocean-700 transition-colors">Inici</a>
+                <a href="#qui-som" class="mobile-nav-link px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-ocean-700 transition-colors">Qui som?</a>
+                <a href="#productes-serveis" class="mobile-nav-link px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-ocean-700 transition-colors">Productes i Serveis</a>
+                <a href="#organitzacio" class="mobile-nav-link px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-ocean-700 transition-colors">Com treballem</a>
+                <a href="#impacte" class="mobile-nav-link px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-ocean-700 transition-colors">Impacte i ODS</a>
+                <a href="#ubicacio" class="mobile-nav-link px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-ocean-700 transition-colors">Ubicació i Contacte</a>
+                <a href="#simulador" class="mobile-nav-link mt-2 px-4 py-3 rounded-xl text-center font-semibold text-white bg-gradient-to-r from-ocean-600 to-aqua-500 shadow-md">Simula l'impacte</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================================================
+             2. SECCIÓ HERO AMB ONES SVG ANIMADES
+             ========================================================= -->
+        <section id="inici" class="relative overflow-hidden bg-gradient-to-br from-ocean-950 via-ocean-900 to-ocean-600 text-white pt-14 pb-28 sm:pt-20 sm:pb-36 lg:pt-24 lg:pb-44">
+            <!-- Esferes decoratives de llum aquàtica -->
+            <div class="pointer-events-none absolute -top-24 -left-24 w-96 h-96 rounded-full bg-aqua-400/20 blur-3xl animate-pulseSoft" aria-hidden="true"></div>
+            <div class="pointer-events-none absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-cyan-300/20 blur-3xl animate-pulseSoft" aria-hidden="true"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Columna Esquerra: Missatge principal -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cyan-100 text-xs sm:text-sm font-semibold tracking-wide">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>Projecte Social i Educatiu · Tarragona</span>
+                        </div>
+
+                        <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-white">
+                            Aigua a Prop:
+                            <span class="block mt-1 bg-gradient-to-r from-cyan-200 via-sky-100 to-emerald-200 bg-clip-text text-transparent">
+                                L'aigua que t'acosta a la vida.
+                            </span>
+                        </h1>
+
+                        <p class="text-lg sm:text-xl text-sky-100/95 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            L'aigua potable, un dret per a tothom. Una proposta per portar aigua segura a qui més ho necessita.
+                        </p>
+
+                        <!-- Botons CTA -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#qui-som" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl bg-white text-ocean-900 font-bold text-base shadow-xl shadow-ocean-950/30 hover:bg-sky-50 hover:-translate-y-0.5 transition-all duration-200">
+                                <span>Descobreix qui som</span>
+                                <svg class="w-5 h-5 text-ocean-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M5 12h14m-7-7 7 7-7 7"/>
+                                </svg>
+                            </a>
+                            <a href="#productes-serveis" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold text-base hover:-translate-y-0.5 transition-all duration-200">
+                                <span>Veure productes i serveis</span>
+                            </a>
+                        </div>
+
+                        <!-- Crèdit ràpid dels creadors -->
+                        <div class="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs sm:text-sm text-sky-200/90">
+                            <span class="inline-flex items-center gap-1.5">
+                                <svg class="w-4 h-4 text-cyan-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                Creat per <strong class="text-white">Yasser Akka i Daniel Soler (3r A)</strong>
+                            </span>
+                            <span class="inline-flex items-center gap-1.5">
+                                <svg class="w-4 h-4 text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                Acompanyament a llarg termini
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Columna Dreta: Targeta visual interactiva i flotant dels 3 pilars -->
+                    <div class="lg:col-span-5">
+                        <div class="relative animate-float">
+                            <div class="rounded-3xl bg-white/12 backdrop-blur-xl border border-white/25 p-6 sm:p-7 shadow-2xl shadow-ocean-950/40">
+                                <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/15">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-11 h-11 rounded-2xl bg-cyan-400/20 border border-cyan-300/30 flex items-center justify-center">
+                                            <svg class="w-6 h-6 text-cyan-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-semibold uppercase tracking-wider text-cyan-200">Els 3 pilars de la solució</p>
+                                            <h2 class="font-display font-bold text-lg text-white">Aigua segura i sostenible</h2>
+                                        </div>
+                                    </div>
+                                    <span class="px-2.5 py-1 rounded-lg bg-emerald-400/20 border border-emerald-300/30 text-emerald-200 text-xs font-bold">ODS 6</span>
+                                </div>
+
+                                <div class="space-y-3.5">
+                                    <!-- Pilar 1 -->
+                                    <div class="group flex items-start gap-4 p-3.5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/10 transition-colors">
+                                        <div class="w-10 h-10 shrink-0 rounded-xl bg-sky-400/25 flex items-center justify-center text-cyan-200">
+                                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-white text-sm sm:text-base">Filtres i dipòsits</h3>
+                                            <p class="text-xs sm:text-sm text-sky-100/85 mt-0.5">Instal·lació adaptada a cada entorn amb manteniment periòdic.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pilar 2 -->
+                                    <div class="group flex items-start gap-4 p-3.5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/10 transition-colors">
+                                        <div class="w-10 h-10 shrink-0 rounded-xl bg-amber-400/25 flex items-center justify-center text-amber-200">
+                                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-white text-sm sm:text-base">Transport segur</h3>
+                                            <p class="text-xs sm:text-sm text-sky-100/85 mt-0.5">Subministrament ràpid d'aigua potable i equips en emergències.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pilar 3 -->
+                                    <div class="group flex items-start gap-4 p-3.5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/10 transition-colors">
+                                        <div class="w-10 h-10 shrink-0 rounded-xl bg-emerald-400/25 flex items-center justify-center text-emerald-200">
+                                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-white text-sm sm:text-base">Educació i sanejament</h3>
+                                            <p class="text-xs sm:text-sm text-sky-100/85 mt-0.5">Hàbits d'higiene, ús responsable i suport a escoles i clíniques.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pt-4 border-t border-white/15 flex items-center justify-between text-xs text-sky-100">
+                                    <span>Seu simulada: Parc Central, Tarragona</span>
+                                    <a href="#simulador" class="font-bold text-cyan-200 hover:text-white underline underline-offset-4">Prova el simulador &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divisor d'ones SVG animades -->
+            <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none" aria-hidden="true">
+                <svg class="relative block w-[115%] -ml-[5%] h-16 sm:h-24 text-white/20 animate-waveSlideSlow" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,40 C200,110 400,0 600,55 C800,110 1000,15 1200,60 L1200,120 L0,120 Z" fill="currentColor"></path>
+                </svg>
+                <svg class="relative block w-[115%] -ml-[5%] h-14 sm:h-20 -mt-12 sm:-mt-16 text-white animate-waveSlide" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,65 C180,10 380,115 600,60 C820,5 1020,105 1200,45 L1200,120 L0,120 Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             3. SECCIÓ "QUI SOM?"
+             ========================================================= -->
+        <section id="qui-som" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+                <!-- Introducció Qui som -->
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700 max-w-3xl mx-auto text-center">
+                    <span class="inline-block px-3.5 py-1.5 rounded-full bg-sky-100 text-ocean-700 font-bold text-xs uppercase tracking-wider mb-3">
+                        Qui som?
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ocean-900 tracking-tight">
+                        Compromesos amb el dret universal a l'aigua neta
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+                        <strong>Aigua a Prop</strong> és una proposta social i educativa ideada per <strong class="text-ocean-800">Yasser Akka i Daniel Soler (3r A)</strong>. El nostre objectiu és acostar l'aigua potable segura a les persones que més ho necessiten, combinant infraestructura adaptada, resposta en emergències i educació per cuidar aquest recurs vital.
+                    </p>
+                </div>
+
+                <!-- Subsecció A: Quin problema volem solucionar? -->
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700">
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                        <div>
+                            <p class="text-sm font-bold text-aqua-500 uppercase tracking-wider">El repte global</p>
+                            <h3 class="font-display font-bold text-2xl sm:text-3xl text-ocean-900 mt-1">Quin problema volem solucionar?</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 max-w-md">Milions de persones pateixen cada dia les conseqüències de no tenir accés directe a aigua neta i segura.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Targeta Problema 1 -->
+                        <article class="group relative rounded-3xl bg-aqua-50 border border-sky-100 p-7 hover:bg-white hover:shadow-xl hover:shadow-sky-900/10 hover:-translate-y-1.5 transition-all duration-300">
+                            <div class="w-14 h-14 rounded-2xl bg-ocean-600/10 text-ocean-600 group-hover:bg-ocean-600 group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-300">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+                            </div>
+                            <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Problema 01</span>
+                            <h4 class="font-display font-bold text-xl text-ocean-900 mt-1 mb-2">Accés limitat</h4>
+                            <p class="text-slate-600 leading-relaxed">Costa molt aconseguir aigua potable en comunitats rurals i zones sense xarxa de distribució adequada.</p>
+                        </article>
+
+                        <!-- Targeta Problema 2 -->
+                        <article class="group relative rounded-3xl bg-aqua-50 border border-sky-100 p-7 hover:bg-white hover:shadow-xl hover:shadow-sky-900/10 hover:-translate-y-1.5 transition-all duration-300">
+                            <div class="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-600 group-hover:bg-rose-600 group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-300">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            </div>
+                            <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Problema 02</span>
+                            <h4 class="font-display font-bold text-xl text-ocean-900 mt-1 mb-2">Risc sanitari</h4>
+                            <p class="text-slate-600 leading-relaxed">Beure aigua bruta o contaminada provoca greus malalties que afecten especialment infants i persones vulnerables.</p>
+                        </article>
+
+                        <!-- Targeta Problema 3 -->
+                        <article class="group relative rounded-3xl bg-aqua-50 border border-sky-100 p-7 hover:bg-white hover:shadow-xl hover:shadow-sky-900/10 hover:-translate-y-1.5 transition-all duration-300">
+                            <div class="w-14 h-14 rounded-2xl bg-amber-500/15 text-amber-600 group-hover:bg-amber-500 group-hover:text-white flex items-center justify-center mb-5 transition-colors duration-300">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M9 20l3-6 3 6"/><path d="M6 12l6-2 6 2"/><path d="M12 10v4"/></svg>
+                            </div>
+                            <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Problema 03</span>
+                            <h4 class="font-display font-bold text-xl text-ocean-900 mt-1 mb-2">Gran esforç</h4>
+                            <p class="text-slate-600 leading-relaxed">Llargues caminades diàries per trobar aigua que dificulten l'assistència a l'escola i el dia a dia de les famílies.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Subsecció B: Per què som diferents? (Comparador Interactiu) -->
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700 rounded-3xl bg-gradient-to-br from-slate-50 via-aqua-50 to-sky-100/60 border border-sky-100 p-6 sm:p-10">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                        <div>
+                            <span class="text-xs font-bold text-ocean-600 uppercase tracking-wider">El nostre valor afegit</span>
+                            <h3 class="font-display font-bold text-2xl sm:text-3xl text-ocean-900 mt-1">Per què som diferents?</h3>
+                        </div>
+                        <!-- Selector interactiu per enfocar la comparativa -->
+                        <div class="inline-flex p-1.5 rounded-2xl bg-white border border-sky-200 shadow-sm self-start md:self-auto" role="group" aria-label="Filtrar comparativa">
+                            <button type="button" data-compare="all" class="compare-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-ocean-900 text-white transition-all">Comparar tots dos</button>
+                            <button type="button" data-compare="others" class="compare-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:text-ocean-900 transition-all">Altres iniciatives</button>
+                            <button type="button" data-compare="us" class="compare-btn px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 hover:text-ocean-900 transition-all">Aigua a Prop</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Altres iniciatives -->
+                        <div id="compare-others" class="rounded-2xl bg-white/80 border border-slate-200 p-6 sm:p-7 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-5">
+                                <span class="w-10 h-10 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                </span>
+                                <div>
+                                    <h4 class="font-display font-bold text-xl text-slate-700">Altres iniciatives</h4>
+                                    <p class="text-xs text-slate-500">Enfocament puntual i genèric</p>
+                                </div>
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3 text-slate-600">
+                                    <span class="mt-1 w-5 h-5 shrink-0 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold">&times;</span>
+                                    <span>Porten aigua només en emergències puntuals, sense continuïtat posterior.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-slate-600">
+                                    <span class="mt-1 w-5 h-5 shrink-0 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold">&times;</span>
+                                    <span>Apliquen solucions estàndard sense adaptació a les necessitats reals del lloc.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Aigua a Prop -->
+                        <div id="compare-us" class="rounded-2xl bg-gradient-to-br from-ocean-900 to-ocean-700 text-white p-6 sm:p-7 shadow-xl shadow-ocean-900/20 ring-2 ring-aqua-400/50 transition-all duration-300">
+                            <div class="flex items-center justify-between gap-3 mb-5">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-10 h-10 rounded-xl bg-aqua-400/25 text-cyan-200 flex items-center justify-center">
+                                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    </span>
+                                    <div>
+                                        <h4 class="font-display font-bold text-xl text-white">Aigua a Prop</h4>
+                                        <p class="text-xs text-cyan-200">Impacte sostenible i proper</p>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-emerald-400/20 border border-emerald-300/40 text-emerald-200 text-xs font-bold">La nostra proposta</span>
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3 text-sky-50">
+                                    <span class="mt-1 w-5 h-5 shrink-0 rounded-full bg-emerald-400 text-ocean-950 flex items-center justify-center text-xs font-extrabold">&#10003;</span>
+                                    <span><strong>Acompanyament a llarg termini:</strong> manteniment periòdic i seguiment real.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sky-50">
+                                    <span class="mt-1 w-5 h-5 shrink-0 rounded-full bg-emerald-400 text-ocean-950 flex items-center justify-center text-xs font-extrabold">&#10003;</span>
+                                    <span><strong>Col·laboració amb associacions locals:</strong> treballem colze a colze sobre el terreny.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sky-50">
+                                    <span class="mt-1 w-5 h-5 shrink-0 rounded-full bg-emerald-400 text-ocean-950 flex items-center justify-center text-xs font-extrabold">&#10003;</span>
+                                    <span><strong>Sistemes adaptats a cada entorn:</strong> estudi previ de cada escola, clínica o comunitat.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subsecció C: A qui enfoquem l'ajuda? (Pestanyes Interactives) -->
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700">
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <span class="text-xs font-bold text-aqua-500 uppercase tracking-wider">El nostre client ideal</span>
+                        <h3 class="font-display font-bold text-2xl sm:text-3xl text-ocean-900 mt-1">A qui enfoquem l'ajuda?</h3>
+                        <p class="text-slate-600 mt-2">Connectem dues realitats: les comunitats que necessiten aigua segura i les persones o entitats que volen impulsar el canvi.</p>
+                    </div>
+
+                    <!-- Selector de 2 pestanyes -->
+                    <div class="flex justify-center mb-8">
+                        <div class="inline-flex flex-wrap justify-center gap-2 p-1.5 rounded-2xl bg-sky-50 border border-sky-200" role="tablist" aria-label="Tipus de client">
+                            <button id="tab-rep" type="button" role="tab" aria-selected="true" aria-controls="panel-rep" class="client-tab px-5 py-3 rounded-xl text-sm sm:text-base font-bold bg-ocean-600 text-white shadow-md transition-all">
+                                Client que rep l'ajuda
+                            </button>
+                            <button id="tab-aporta" type="button" role="tab" aria-selected="false" aria-controls="panel-aporta" class="client-tab px-5 py-3 rounded-xl text-sm sm:text-base font-bold text-ocean-800 hover:bg-white transition-all">
+                                Client que aporta
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Panell 1: Client que rep l'ajuda -->
+                    <div id="panel-rep" role="tabpanel" aria-labelledby="tab-rep" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="rounded-3xl bg-white border border-sky-100 p-6 shadow-sm hover:shadow-lg hover:border-sky-300 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-100 text-ocean-700 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            </div>
+                            <h4 class="font-display font-bold text-lg text-ocean-900">Comunitats rurals sense xarxa d'aigua</h4>
+                            <p class="text-sm text-slate-600 mt-2">Poblacions aïllades que no disposen d'infraestructura bàsica per obtenir aigua potable de manera regular.</p>
+                        </div>
+
+                        <div class="rounded-3xl bg-white border border-sky-100 p-6 shadow-sm hover:shadow-lg hover:border-sky-300 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <h4 class="font-display font-bold text-lg text-ocean-900">Escoles locals desprotegides</h4>
+                            <p class="text-sm text-slate-600 mt-2">Centres educatius on garantir aigua neta i higiene permet que els infants aprenguin amb salut i seguretat.</p>
+                        </div>
+
+                        <div class="rounded-3xl bg-white border border-sky-100 p-6 shadow-sm hover:shadow-lg hover:border-sky-300 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <h4 class="font-display font-bold text-lg text-ocean-900">Centres de salut vulnerables</h4>
+                            <p class="text-sm text-slate-600 mt-2">Clíniques i dispensaris que necessiten aigua en òptimes condicions sanitàries per atendre pacients.</p>
+                        </div>
+                    </div>
+
+                    <!-- Panell 2: Client que aporta -->
+                    <div id="panel-aporta" role="tabpanel" aria-labelledby="tab-aporta" class="hidden grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="rounded-3xl bg-white border border-emerald-100 p-6 shadow-sm hover:shadow-lg hover:border-emerald-300 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </div>
+                            <h4 class="font-display font-bold text-lg text-ocean-900">Empreses compromeses amb la RSC</h4>
+                            <p class="text-sm text-slate-600 mt-2">Companyies implicades en la responsabilitat social corporativa que volen donar suport a projectes transparents.</p>
+                        </div>
+
+                        <div class="rounded-3xl bg-white border border-emerald-100 p-6 shadow-sm hover:shadow-lg hover:border-emerald-300 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-100 text-ocean-700 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+                            </div>
+                            <h4 class="font-display font-bold text-lg text-ocean-900">Institucions públiques i fundacions solidàries</h4>
+                            <p class="text-sm text-slate-600 mt-2">Organismes i fundacions que impulsen aliances per assolir els Objectius de Desenvolupament Sostenible.</p>
+                        </div>
+
+                        <div class="rounded-3xl bg-white border border-emerald-100 p-6 shadow-sm hover:shadow-lg hover:border-emerald-300 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                            <h4 class="font-display font-bold text-lg text-ocean-900">Socis i particulars amb consciència ètica i ecològica</h4>
+                            <p class="text-sm text-slate-600 mt-2">Ciutadans solidaris que desitgen contribuir de manera senzilla, propera i fiable a millorar vides.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             4. SECCIÓ "PRODUCTES I SERVEIS"
+             ========================================================= -->
+        <section id="productes-serveis" class="py-16 sm:py-24 bg-aqua-50 border-y border-sky-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700 max-w-3xl mx-auto text-center mb-14">
+                    <span class="inline-block px-3.5 py-1.5 rounded-full bg-white border border-sky-200 text-ocean-700 font-bold text-xs uppercase tracking-wider mb-3">
+                        Productes i Serveis
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ocean-900 tracking-tight">
+                        La nostra solució integral per a l'aigua segura
+                    </h2>
+                    <p class="mt-4 text-base sm:text-lg text-slate-600">
+                        Oferim tres línies d'actuació complementàries per assegurar no només l'arribada d'aigua potable, sinó també la seva qualitat i sostenibilitat en el temps.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+                    <!-- Servei 1 -->
+                    <article class="reveal opacity-0 translate-y-6 transition-all duration-700 flex flex-col rounded-3xl bg-white border border-sky-100 p-7 shadow-sm hover:shadow-xl hover:shadow-sky-900/10 hover:-translate-y-1.5">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-ocean-600 to-aqua-500 text-white flex items-center justify-center shadow-lg shadow-sky-500/25">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-sky-50 text-ocean-700 text-xs font-bold border border-sky-100">Solució 01</span>
+                        </div>
+
+                        <h3 class="font-display font-bold text-2xl text-ocean-900 mb-3">Instal·lació de filtres i dipòsits</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-5">
+                            Selecció, adaptació i muntatge d'equips (filtres, dipòsits i canonades) fets a mida per a cada comunitat, amb verificació tècnica i manteniment periòdic.
+                        </p>
+
+                        <ul class="space-y-2.5 text-sm text-slate-700 mb-6 flex-1">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-aqua-500 font-bold mt-0.5">&#10003;</span>
+                                <span>No fabriquem des de zero: seleccionem i adaptem equips d'alta qualitat.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-aqua-500 font-bold mt-0.5">&#10003;</span>
+                                <span>Muntatge personalitzat i comprovació tècnica final.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-aqua-500 font-bold mt-0.5">&#10003;</span>
+                                <span>Neteja i manteniment periòdic dels sistemes.</span>
+                            </li>
+                        </ul>
+
+                        <button type="button" data-service="filtres" class="open-service-modal w-full py-3 px-4 rounded-2xl bg-sky-50 hover:bg-ocean-600 text-ocean-800 hover:text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                            <span>Veure fitxa tècnica</span>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                        </button>
+                    </article>
+
+                    <!-- Servei 2 -->
+                    <article class="reveal opacity-0 translate-y-6 transition-all duration-700 flex flex-col rounded-3xl bg-white border border-sky-100 p-7 shadow-sm hover:shadow-xl hover:shadow-sky-900/10 hover:-translate-y-1.5">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-white flex items-center justify-center shadow-lg shadow-amber-500/25">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-bold border border-amber-100">Solució 02</span>
+                        </div>
+
+                        <h3 class="font-display font-bold text-2xl text-ocean-900 mb-3">Transport segur en emergències</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-5">
+                            Logística àgil i segura per portar equipament al destí i garantir el subministrament immediat d'aigua potable en situacions urgents.
+                        </p>
+
+                        <ul class="space-y-2.5 text-sm text-slate-700 mb-6 flex-1">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-amber-500 font-bold mt-0.5">&#10003;</span>
+                                <span>Trasllat directe de filtres, dipòsits i eines al destí.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-amber-500 font-bold mt-0.5">&#10003;</span>
+                                <span>Coordinació de lliurament i instal·lació sobre el terreny.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-amber-500 font-bold mt-0.5">&#10003;</span>
+                                <span>Subministrament segur d'aigua potable en crisis.</span>
+                            </li>
+                        </ul>
+
+                        <button type="button" data-service="transport" class="open-service-modal w-full py-3 px-4 rounded-2xl bg-amber-50 hover:bg-amber-500 text-amber-800 hover:text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                            <span>Veure fitxa tècnica</span>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                        </button>
+                    </article>
+
+                    <!-- Servei 3 -->
+                    <article class="reveal opacity-0 translate-y-6 transition-all duration-700 flex flex-col rounded-3xl bg-white border border-sky-100 p-7 shadow-sm hover:shadow-xl hover:shadow-sky-900/10 hover:-translate-y-1.5">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/25">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-100">Solució 03</span>
+                        </div>
+
+                        <h3 class="font-display font-bold text-2xl text-ocean-900 mb-3">Educació, neteja i sanejament</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-5">
+                            Formació pràctica per cuidar l'aigua, fomentar hàbits saludables d'higiene i oferir suport continu a escoles i centres de salut.
+                        </p>
+
+                        <ul class="space-y-2.5 text-sm text-slate-700 mb-6 flex-1">
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-emerald-500 font-bold mt-0.5">&#10003;</span>
+                                <span>Garantia d'aigua en òptimes condicions sanitàries.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-emerald-500 font-bold mt-0.5">&#10003;</span>
+                                <span>Promoció d'hàbits d'higiene i ús responsable.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <span class="text-emerald-500 font-bold mt-0.5">&#10003;</span>
+                                <span>Suport directe a escoles locals i clíniques vulnerables.</span>
+                            </li>
+                        </ul>
+
+                        <button type="button" data-service="educacio" class="open-service-modal w-full py-3 px-4 rounded-2xl bg-emerald-50 hover:bg-emerald-600 text-emerald-800 hover:text-white font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+                            <span>Veure fitxa tècnica</span>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             5. INTERACTIU: "COM TREBALLEM? ORGANITZACIÓ INTERNA" (01 - 07)
+             ========================================================= -->
+        <section id="organitzacio" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700 max-w-3xl mx-auto text-center mb-12">
+                    <span class="inline-block px-3.5 py-1.5 rounded-full bg-sky-100 text-ocean-700 font-bold text-xs uppercase tracking-wider mb-3">
+                        Organització Interna
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ocean-900 tracking-tight">
+                        Com treballem? Les 7 activitats de l'empresa
+                    </h2>
+                    <p class="mt-3 text-slate-600 text-base sm:text-lg">
+                        Fes clic a qualsevol de les 7 àrees operatives per explorar com ens organitzem des de la planificació fins a la distribució.
+                    </p>
+                </div>
+
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Columna Esquerra: Selector de 7 activitats -->
+                    <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5" id="org-selector" role="tablist" aria-label="Activitats de l'organització">
+                        <!-- Els botons 01 a 07 es generen dinàmicament o estan sincronitzats amb JS -->
+                    </div>
+
+                    <!-- Columna Dreta: Panell detallat dinàmic -->
+                    <div class="lg:col-span-7">
+                        <div id="org-detail-panel" class="rounded-3xl bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-700 text-white p-6 sm:p-9 shadow-2xl shadow-ocean-900/20 min-h-[380px] flex flex-col justify-between transition-all duration-300">
+                            <div>
+                                <!-- Capçalera del panell -->
+                                <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-5 border-b border-white/15">
+                                    <div class="flex items-center gap-4">
+                                        <span id="org-step-badge" class="w-14 h-14 rounded-2xl bg-aqua-400/20 border border-aqua-300/40 text-cyan-200 font-display font-extrabold text-2xl flex items-center justify-center">01</span>
+                                        <div>
+                                            <span id="org-step-label" class="text-xs font-bold uppercase tracking-widest text-cyan-300">Activitat 01 de 07</span>
+                                            <h3 id="org-step-title" class="font-display font-bold text-2xl sm:text-3xl text-white mt-0.5">Neteja i sanejament</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Descripció breu -->
+                                <p id="org-step-summary" class="text-sky-100 text-base leading-relaxed mb-6"></p>
+
+                                <!-- Llista de punts clau -->
+                                <div id="org-step-points" class="grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
+                            </div>
+
+                            <!-- Barra de progrés i botons Anterior / Següent -->
+                            <div class="mt-8 pt-5 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div class="w-full sm:w-48">
+                                    <div class="flex justify-between text-xs text-sky-200 mb-1.5">
+                                        <span>Progrés operatiu</span>
+                                        <span id="org-progress-text">1 / 7</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-white/15 overflow-hidden">
+                                        <div id="org-progress-bar" class="h-full rounded-full bg-gradient-to-r from-cyan-300 to-emerald-300 transition-all duration-300" style="width: 14.3%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-2.5 w-full sm:w-auto justify-end">
+                                    <button id="org-prev-btn" type="button" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-sm font-semibold transition-colors">
+                                        &larr; Anterior
+                                    </button>
+                                    <button id="org-next-btn" type="button" class="px-4 py-2.5 rounded-xl bg-white text-ocean-900 hover:bg-sky-50 text-sm font-bold transition-colors">
+                                        Següent &rarr;
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             6. SECCIÓ "IMPACTE, ODS I SIMULADOR INTERACTIU"
+             ========================================================= -->
+        <section id="impacte" class="py-16 sm:py-24 bg-gradient-to-b from-aqua-50 to-white border-t border-sky-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+                <!-- Avantatges del projecte -->
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700">
+                    <div class="text-center max-w-2xl mx-auto mb-10">
+                        <span class="inline-block px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-xs uppercase tracking-wider mb-3">
+                            Resultats i Beneficis
+                        </span>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ocean-900 tracking-tight">
+                            Avantatges del projecte i ODS
+                        </h2>
+                        <p class="mt-3 text-slate-600">El nostre treball genera millores directes en la salut, l'educació i el benestar diari de les comunitats.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div class="rounded-3xl bg-white border border-sky-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-100 text-ocean-600 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-ocean-900">Més aigua neta per a les famílies</h3>
+                            <p class="text-sm text-slate-600 mt-1.5">Accés proper, constant i segur a aigua potable cada dia.</p>
+                        </div>
+
+                        <div class="rounded-3xl bg-white border border-emerald-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-ocean-900">Reducció dràstica de malalties</h3>
+                            <p class="text-sm text-slate-600 mt-1.5">Prevenció d'infeccions causades pel consum d'aigua contaminada.</p>
+                        </div>
+
+                        <div class="rounded-3xl bg-white border border-amber-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-ocean-900">Suport directe a escoles i clíniques</h3>
+                            <p class="text-sm text-slate-600 mt-1.5">Infraestructura hídrica segura en espais vitals per a la comunitat.</p>
+                        </div>
+
+                        <div class="rounded-3xl bg-white border border-cyan-100 p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-ocean-900">Foment de l'ús responsable</h3>
+                            <p class="text-sm text-slate-600 mt-1.5">Conscienciació i educació mediambiental per protegir cada gota.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objectius de Desenvolupament Sostenible (ODS) -->
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-6">
+                        <h3 class="font-display font-bold text-xl sm:text-2xl text-ocean-900">Alineats amb els Objectius de Desenvolupament Sostenible (ODS)</h3>
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Agenda 2030 · Nacions Unides</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- ODS 6 -->
+                        <div class="rounded-2xl bg-[#26BDE2] text-white p-5 shadow-md hover:-translate-y-1 transition-transform">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-display font-extrabold text-3xl">6</span>
+                                <span class="px-2.5 py-0.5 rounded-full bg-white/20 text-xs font-bold">ODS Principal</span>
+                            </div>
+                            <h4 class="font-display font-bold text-base">Aigua neta i sanejament</h4>
+                            <p class="text-xs text-white/90 mt-1">Garantir la disponibilitat i la gestió sostenible de l'aigua per a tothom.</p>
+                        </div>
+
+                        <!-- ODS 3 -->
+                        <div class="rounded-2xl bg-[#4C9F38] text-white p-5 shadow-md hover:-translate-y-1 transition-transform">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-display font-extrabold text-3xl">3</span>
+                                <span class="px-2.5 py-0.5 rounded-full bg-white/20 text-xs font-bold">Salut</span>
+                            </div>
+                            <h4 class="font-display font-bold text-base">Salut i benestar</h4>
+                            <p class="text-xs text-white/90 mt-1">Reduir les malalties transmeses per l'aigua contaminada.</p>
+                        </div>
+
+                        <!-- ODS 4 -->
+                        <div class="rounded-2xl bg-[#C5192D] text-white p-5 shadow-md hover:-translate-y-1 transition-transform">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-display font-extrabold text-3xl">4</span>
+                                <span class="px-2.5 py-0.5 rounded-full bg-white/20 text-xs font-bold">Educació</span>
+                            </div>
+                            <h4 class="font-display font-bold text-base">Educació de qualitat</h4>
+                            <p class="text-xs text-white/90 mt-1">Donar suport a escoles locals i educar en l'ús responsable.</p>
+                        </div>
+
+                        <!-- ODS 17 -->
+                        <div class="rounded-2xl bg-[#19486A] text-white p-5 shadow-md hover:-translate-y-1 transition-transform">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-display font-extrabold text-3xl">17</span>
+                                <span class="px-2.5 py-0.5 rounded-full bg-white/20 text-xs font-bold">Aliances</span>
+                            </div>
+                            <h4 class="font-display font-bold text-base">Aliances per assolir els objectius</h4>
+                            <p class="text-xs text-white/90 mt-1">Col·laboració entre comunitats, empreses, institucions i particulars.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIMULADOR D'IMPACTE INTERACTIU (DEMOSTRACIÓ EDUCATIVA) -->
+                <div id="simulador" class="reveal opacity-0 translate-y-6 transition-all duration-700 rounded-3xl bg-white border-2 border-sky-200 shadow-xl shadow-sky-900/10 overflow-hidden">
+                    <div class="bg-gradient-to-r from-ocean-900 via-ocean-700 to-aqua-500 px-6 sm:px-10 py-6 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-white/15 text-cyan-100 text-xs font-bold uppercase tracking-wider mb-1.5">
+                                Eina Interactiva · Demostració Educativa
+                            </span>
+                            <h3 class="font-display font-extrabold text-2xl sm:text-3xl">Simulador d'Impacte Solidari</h3>
+                        </div>
+                        <p class="text-sm text-sky-100 max-w-sm">Mou el control lliscant per veure com una aportació simulada es transforma en aigua potable i manteniment.</p>
+                    </div>
+
+                    <div class="p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <!-- Controls del simulador -->
+                        <div class="lg:col-span-5 space-y-6">
+                            <div>
+                                <div class="flex items-baseline justify-between mb-2">
+                                    <label for="donation-slider" class="text-sm font-bold text-slate-700">Aportació simulada</label>
+                                    <span id="donation-display" class="font-display font-extrabold text-4xl text-ocean-600">50€</span>
+                                </div>
+
+                                <input id="donation-slider" type="range" min="10" max="500" step="5" value="50" class="w-full h-3 bg-sky-100 rounded-full appearance-none cursor-pointer accent-ocean-600 focus:outline-none focus:ring-2 focus:ring-sky-400">
+
+                                <div class="flex justify-between text-xs text-slate-400 font-medium mt-1.5">
+                                    <span>10€</span>
+                                    <span>250€</span>
+                                    <span>500€</span>
+                                </div>
+                            </div>
+
+                            <!-- Botons ràpids predefinits -->
+                            <div>
+                                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2.5">Selecció ràpida</p>
+                                <div class="grid grid-cols-4 gap-2">
+                                    <button type="button" data-amount="15" class="preset-btn py-2.5 rounded-xl border border-sky-200 bg-sky-50 hover:bg-ocean-600 hover:text-white text-ocean-900 font-bold text-sm transition-colors">15€</button>
+                                    <button type="button" data-amount="50" class="preset-btn py-2.5 rounded-xl border border-ocean-600 bg-ocean-600 text-white font-bold text-sm transition-colors">50€</button>
+                                    <button type="button" data-amount="150" class="preset-btn py-2.5 rounded-xl border border-sky-200 bg-sky-50 hover:bg-ocean-600 hover:text-white text-ocean-900 font-bold text-sm transition-colors">150€</button>
+                                    <button type="button" data-amount="300" class="preset-btn py-2.5 rounded-xl border border-sky-200 bg-sky-50 hover:bg-ocean-600 hover:text-white text-ocean-900 font-bold text-sm transition-colors">300€</button>
+                                </div>
+                            </div>
+
+                            <!-- Missatge dinàmic -->
+                            <div id="simulator-message" class="rounded-2xl bg-aqua-50 border border-sky-100 p-4 text-sm text-ocean-900 font-medium">
+                                Amb <strong>50€</strong> contribuïm a subministrar aigua segura i realitzar manteniment de filtres en una escola o comunitat rural.
+                            </div>
+                        </div>
+
+                        <!-- Resultats calculats dinàmicament -->
+                        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="rounded-2xl bg-gradient-to-br from-sky-50 to-cyan-50 border border-sky-200 p-5 text-center">
+                                <div class="w-11 h-11 mx-auto rounded-xl bg-ocean-600/10 text-ocean-600 flex items-center justify-center mb-3">
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                                </div>
+                                <p id="metric-liters" class="font-display font-extrabold text-3xl text-ocean-900">2.000</p>
+                                <p class="text-xs font-bold text-sky-700 uppercase tracking-wide mt-1">Litres d'aigua potable</p>
+                            </div>
+
+                            <div class="rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 p-5 text-center">
+                                <div class="w-11 h-11 mx-auto rounded-xl bg-emerald-600/10 text-emerald-600 flex items-center justify-center mb-3">
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <p id="metric-families" class="font-display font-extrabold text-3xl text-emerald-800">4</p>
+                                <p class="text-xs font-bold text-emerald-700 uppercase tracking-wide mt-1">Famílies beneficiades</p>
+                            </div>
+
+                            <div class="rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 p-5 text-center">
+                                <div class="w-11 h-11 mx-auto rounded-xl bg-amber-500/15 text-amber-600 flex items-center justify-center mb-3">
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                                </div>
+                                <p id="metric-filters" class="font-display font-extrabold text-3xl text-amber-800">2</p>
+                                <p class="text-xs font-bold text-amber-700 uppercase tracking-wide mt-1">Filtres mantinguts</p>
+                            </div>
+
+                            <!-- Avís educatiu del simulador -->
+                            <div class="sm:col-span-3 rounded-xl bg-slate-50 border border-slate-200 px-4 py-3 flex items-center gap-3 text-xs text-slate-600">
+                                <svg class="w-5 h-5 shrink-0 text-sky-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                                <span><strong>Nota educativa:</strong> Aquest càlcul és una simulació il·lustrativa per a la presentació de classe. No es realitza cap transacció ni cobrament real.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             7. SECCIÓ "ON ENS UBIQUEM? I CONTACTE"
+             ========================================================= -->
+        <section id="ubicacio" class="py-16 sm:py-24 bg-white border-t border-sky-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="reveal opacity-0 translate-y-6 transition-all duration-700 max-w-3xl mx-auto text-center mb-14">
+                    <span class="inline-block px-3.5 py-1.5 rounded-full bg-sky-100 text-ocean-700 font-bold text-xs uppercase tracking-wider mb-3">
+                        Ubicació i Contacte
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ocean-900 tracking-tight">
+                        On ens ubiquem?
+                    </h2>
+                    <p class="mt-3 text-slate-600 text-base sm:text-lg">
+                        A prop teu a Tarragona per facilitar la participació ciutadana i augmentar la visibilitat del projecte.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    <!-- Columna Esquerra: Adreça + Explicació + Mapa Visual Estilitzat -->
+                    <div class="reveal opacity-0 translate-y-6 transition-all duration-700 lg:col-span-6 flex flex-col gap-5">
+                        <!-- Targeta d'adreça -->
+                        <div class="rounded-3xl bg-aqua-50 border border-sky-100 p-6 sm:p-7">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 shrink-0 rounded-2xl bg-ocean-600 text-white flex items-center justify-center shadow-md shadow-sky-500/25">
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-ocean-600">Punt d'atenció i donacions</span>
+                                    <h3 class="font-display font-bold text-xl text-ocean-900 mt-0.5">Centre Comercial Parc Central (Planta -1)</h3>
+                                    <p class="text-slate-700 text-sm sm:text-base mt-1 font-medium">
+                                        Carrer del Cardenal Vidal i Barraquer, 15 - 17, 43005 Tarragona, Espanya
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 pt-5 border-t border-sky-200/70">
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    <strong>Per què a la planta -1 del Parc Central?</strong> Així la gent pot aportar donacions sense haver de desplaçar-se expressament fins a nosaltres i, com que hi passa molta gent cada dia, augmentem significativament la nostra visibilitat.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Targeta de Mapa Visual Interactiu SVG (sense imatges externes trencades) -->
+                        <div class="relative flex-1 min-h-[260px] rounded-3xl bg-gradient-to-br from-sky-100 via-cyan-50 to-ocean-100 border border-sky-200 overflow-hidden shadow-inner p-6 flex flex-col justify-between">
+                            <!-- Quadrícula de carrers estilitzada en SVG -->
+                            <svg class="absolute inset-0 w-full h-full opacity-45 pointer-events-none" viewBox="0 0 500 300" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                                <path d="M-20 80 L520 40" stroke="#0284c7" stroke-width="10" stroke-opacity="0.22"/>
+                                <path d="M-20 210 L520 170" stroke="#0284c7" stroke-width="14" stroke-opacity="0.28"/>
+                                <path d="M130 -20 L180 320" stroke="#0284c7" stroke-width="10" stroke-opacity="0.22"/>
+                                <path d="M340 -20 L300 320" stroke="#0284c7" stroke-width="8" stroke-opacity="0.2"/>
+                                <rect x="195" y="95" width="110" height="75" rx="16" fill="#0c4a6e" fill-opacity="0.16" stroke="#0284c7" stroke-width="2" stroke-dasharray="6 4"/>
+                                <path d="M0 270 Q130 245 260 275 T500 265 L500 300 L0 300 Z" fill="#06b6d4" fill-opacity="0.22"/>
+                            </svg>
+
+                            <div class="relative z-10 flex items-center justify-between">
+                                <span class="px-3 py-1.5 rounded-xl bg-white/90 backdrop-blur text-ocean-900 text-xs font-bold shadow-sm">
+                                    Tarragona · 43005
+                                </span>
+                                <span class="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-800 text-xs font-bold">
+                                    Planta -1
+                                </span>
+                            </div>
+
+                            <!-- Pin central animat -->
+                            <div class="relative z-10 my-6 flex flex-col items-center justify-center text-center">
+                                <div class="relative">
+                                    <span class="absolute inset-0 rounded-full bg-ocean-600/30 animate-ping"></span>
+                                    <div class="relative w-14 h-14 rounded-full bg-ocean-900 text-white flex items-center justify-center shadow-xl border-4 border-white">
+                                        <svg class="w-6 h-6 text-cyan-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="mt-2.5 px-4 py-1.5 rounded-xl bg-white/95 shadow-md border border-sky-100">
+                                    <p class="font-display font-bold text-sm text-ocean-900">Parc Central · Aigua a Prop</p>
+                                    <p class="text-[11px] text-slate-500">C/ Cardenal Vidal i Barraquer, 15 - 17</p>
+                                </div>
+                            </div>
+
+                            <div class="relative z-10 flex justify-center sm:justify-end">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Centre+Comercial+Parc+Central+Carrer+del+Cardenal+Vidal+i+Barraquer+15+17+43005+Tarragona" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-ocean-900 hover:bg-ocean-700 text-white text-xs sm:text-sm font-semibold shadow-md transition-colors">
+                                    <span>Obrir ubicació a Google Maps</span>
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Dreta: Formulari interactiu de demostració -->
+                    <div class="reveal opacity-0 translate-y-6 transition-all duration-700 lg:col-span-6">
+                        <div class="h-full rounded-3xl bg-white border border-sky-200 shadow-lg shadow-sky-900/5 p-6 sm:p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="font-display font-bold text-2xl text-ocean-900">Vols col·laborar o resoldre dubtes?</h3>
+                                <p class="text-sm text-slate-600 mt-1.5">
+                                    Atenció presencial i online per a comunitats, donants, escoles i empreses. Prova aquest formulari demostratiu del nostre projecte.
+                                </p>
+
+                                <!-- Banner de confirmació instantània (inicialment ocult) -->
+                                <div id="form-success-banner" class="hidden mt-6 rounded-2xl bg-emerald-50 border border-emerald-200 p-5 text-emerald-900" role="status" aria-live="polite">
+                                    <div class="flex items-start gap-3">
+                                        <span class="w-8 h-8 shrink-0 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold">&#10003;</span>
+                                        <div>
+                                            <h4 class="font-bold text-base">Missatge simulat rebut correctament!</h4>
+                                            <p id="form-success-text" class="text-sm text-emerald-800 mt-1"></p>
+                                            <p class="text-xs text-emerald-700 mt-2">
+                                                <em>Recordatori: Aquesta web és un projecte escolar de classe i no s'ha enviat ni guardat cap dada real.</em>
+                                            </p>
+                                            <button id="form-reset-btn" type="button" class="mt-3 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-colors">
+                                                Enviar una altra prova
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Formulari -->
+                                <form id="contact-form" class="mt-6 space-y-4" novalidate>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label for="contact-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Nom i cognoms *</label>
+                                            <input id="contact-name" name="name" type="text" required placeholder="Ex: Maria Puig" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-ocean-600 focus:ring-2 focus:ring-sky-200 outline-none text-sm transition-all">
+                                        </div>
+                                        <div>
+                                            <label for="contact-email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Correu electrònic *</label>
+                                            <input id="contact-email" name="email" type="email" required placeholder="exemple@correu.cat" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-ocean-600 focus:ring-2 focus:ring-sky-200 outline-none text-sm transition-all">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label for="contact-role" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Com ens contactes?</label>
+                                        <select id="contact-role" name="role" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-ocean-600 focus:ring-2 focus:ring-sky-200 outline-none text-sm transition-all">
+                                            <option value="Soci o particular solidari">Soci o particular solidari</option>
+                                            <option value="Empresa (Responsabilitat Social)">Empresa (Responsabilitat Social)</option>
+                                            <option value="Institució pública o fundació">Institució pública o fundació</option>
+                                            <option value="Escola, clínica o comunitat rural">Escola, clínica o comunitat rural</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label for="contact-message" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Missatge *</label>
+                                        <textarea id="contact-message" name="message" rows="3" required placeholder="Explica'ns com vols col·laborar o quin dubte tens..." class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-ocean-600 focus:ring-2 focus:ring-sky-200 outline-none text-sm transition-all resize-none"></textarea>
+                                    </div>
+
+                                    <!-- Error de validació personalitzat (sense alert) -->
+                                    <p id="form-error-msg" class="hidden text-xs font-semibold text-rose-600 bg-rose-50 border border-rose-200 rounded-xl px-3.5 py-2.5"></p>
+
+                                    <button type="submit" class="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-ocean-900 to-ocean-600 hover:from-ocean-800 hover:to-aqua-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-ocean-900/20 hover:-translate-y-0.5 transition-all">
+                                        Enviar consulta (Demostració)
+                                    </button>
+                                </form>
+                            </div>
+
+                            <p class="mt-5 text-[11px] text-slate-500 text-center">
+                                Formulari demostratiu d'un projecte acadèmic de classe. No recull dades personals reals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+         8. PEU DE PÀGINA (FOOTER) AMB AVÍS ACADÈMIC CLAR
+         ========================================================= -->
+    <footer class="bg-ocean-950 text-sky-100 pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Cita inspiradora principal -->
+            <div class="rounded-3xl bg-white/5 border border-white/10 p-7 sm:p-10 text-center mb-12">
+                <svg class="w-9 h-9 mx-auto text-cyan-400 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                <blockquote class="font-display font-bold text-xl sm:text-2xl lg:text-3xl text-white max-w-3xl mx-auto leading-snug">
+                    "Aigua potable per a tothom. L'aigua neta és essencial per viure. Treballem cada dia per fer-ho possible."
+                </blockquote>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-white/10 items-center">
+                <!-- Marca i crèdits -->
+                <div class="md:col-span-5 space-y-2 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2.5">
+                        <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-ocean-600 to-aqua-500 flex items-center justify-center text-white font-bold">A</span>
+                        <span class="font-display font-extrabold text-xl text-white">Aigua a Prop</span>
+                    </div>
+                    <p class="text-sm text-sky-200">
+                        Projecte escolar elaborat per <strong class="text-white">Yasser Akka i Daniel Soler (3r A)</strong>.
+                    </p>
+                </div>
+
+                <!-- Enllaços ràpids -->
+                <div class="md:col-span-5 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-sky-200">
+                    <a href="#inici" class="hover:text-white transition-colors">Inici</a>
+                    <a href="#qui-som" class="hover:text-white transition-colors">Qui som?</a>
+                    <a href="#productes-serveis" class="hover:text-white transition-colors">Productes i Serveis</a>
+                    <a href="#organitzacio" class="hover:text-white transition-colors">Organització</a>
+                    <a href="#impacte" class="hover:text-white transition-colors">Impacte</a>
+                    <a href="#ubicacio" class="hover:text-white transition-colors">Ubicació</a>
+                </div>
+
+                <!-- Botó Tornar a dalt -->
+                <div class="md:col-span-2 flex justify-center md:justify-end">
+                    <a href="#inici" aria-label="Tornar a dalt de la pàgina" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold text-white transition-colors">
+                        <span>Tornar a dalt</span>
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Avís acadèmic obligatori i ben visible -->
+            <div class="mt-8 rounded-2xl bg-sky-900/60 border border-cyan-400/30 px-5 py-4 text-center">
+                <p class="text-xs sm:text-sm text-cyan-100">
+                    <strong class="text-white uppercase tracking-wide">Avís acadèmic:</strong> Aquesta pàgina web forma part d'un projecte acadèmic de classe i no correspon a una empresa ni ONG real.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         MODAL INTERACTIU DE DETALLS DELS PRODUCTES I SERVEIS
+         ========================================================= -->
+    <div id="service-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-ocean-950/70 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="relative w-full max-w-lg rounded-3xl bg-white shadow-2xl border border-sky-100 p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+            <button id="close-modal-btn" type="button" aria-label="Tancar finestra" class="absolute top-5 right-5 p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+
+            <span id="modal-badge" class="inline-block px-3 py-1 rounded-full bg-sky-100 text-ocean-700 text-xs font-bold uppercase tracking-wider mb-2">Detall del servei</span>
+            <h3 id="modal-title" class="font-display font-extrabold text-2xl text-ocean-900 pr-8"></h3>
+            <p id="modal-description" class="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed"></p>
+
+            <div class="mt-5 pt-5 border-t border-slate-100">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-ocean-700 mb-3">Com ho duem a terme?</h4>
+                <ul id="modal-list" class="space-y-2.5 text-sm text-slate-700"></ul>
+            </div>
+
+            <div class="mt-6 flex justify-end gap-3">
+                <button id="modal-done-btn" type="button" class="px-5 py-2.5 rounded-xl bg-ocean-900 hover:bg-ocean-700 text-white text-sm font-bold transition-colors">Entesos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         JAVASCRIPT INTERACTIU I GESTIÓ D'ESTAT
+         ========================================================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                /* ---------------------------------------------------------
+                   1. MENÚ MÒBIL I OMBRES A LA BARRA DE NAVEGACIÓ
+                   --------------------------------------------------------- */
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const iconOpen = document.getElementById('menu-icon-open');
+                const iconClose = document.getElementById('menu-icon-close');
+                const navbar = document.getElementById('navbar');
+
+                if (mobileMenuBtn && mobileMenu) {
+                    const toggleMenu = (forceClose = false) => {
+                        const isCurrentlyOpen = !mobileMenu.classList.contains('hidden');
+                        const shouldOpen = forceClose ? false : !isCurrentlyOpen;
+                        mobileMenu.classList.toggle('hidden', !shouldOpen);
+                        iconOpen.classList.toggle('hidden', shouldOpen);
+                        iconClose.classList.toggle('hidden', !shouldOpen);
+                        mobileMenuBtn.setAttribute('aria-expanded', String(shouldOpen));
+                    };
+
+                    mobileMenuBtn.addEventListener('click', () => toggleMenu());
+                    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                        link.addEventListener('click', () => toggleMenu(true));
+                    });
+                }
+
+                window.addEventListener('scroll', () => {
+                    if (navbar) {
+                        navbar.classList.toggle('shadow-md', window.scrollY > 20);
+                    }
+                }, { passive: true });
+
+                /* ---------------------------------------------------------
+                   2. ANIMACIONS EN FER SCROLL (IntersectionObserver)
+                   --------------------------------------------------------- */
+                const revealElements = document.querySelectorAll('.reveal');
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries, obs) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.remove('opacity-0', 'translate-y-6');
+                                entry.target.classList.add('opacity-100', 'translate-y-0');
+                                obs.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.12 });
+
+                    revealElements.forEach(el => observer.observe(el));
+                } else {
+                    revealElements.forEach(el => {
+                        el.classList.remove('opacity-0', 'translate-y-6');
+                        el.classList.add('opacity-100', 'translate-y-0');
+                    });
+                }
+
+                /* ---------------------------------------------------------
+                   3. COMPARADOR INTERACTIU ("PER QUÈ SOM DIFERENTS?")
+                   --------------------------------------------------------- */
+                const compareBtns = document.querySelectorAll('.compare-btn');
+                const cardOthers = document.getElementById('compare-others');
+                const cardUs = document.getElementById('compare-us');
+
+                compareBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const mode = btn.getAttribute('data-compare');
+                        compareBtns.forEach(b => {
+                            b.classList.remove('bg-ocean-900', 'text-white');
+                            b.classList.add('text-slate-600');
+                        });
+                        btn.classList.add('bg-ocean-900', 'text-white');
+                        btn.classList.remove('text-slate-600');
+
+                        if (mode === 'all') {
+                            cardOthers.classList.remove('opacity-40', 'scale-[0.98]');
+                            cardUs.classList.remove('opacity-40', 'scale-[0.98]');
+                        } else if (mode === 'others') {
+                            cardOthers.classList.remove('opacity-40', 'scale-[0.98]');
+                            cardUs.classList.add('opacity-40', 'scale-[0.98]');
+                        } else if (mode === 'us') {
+                            cardUs.classList.remove('opacity-40', 'scale-[0.98]');
+                            cardOthers.classList.add('opacity-40', 'scale-[0.98]');
+                        }
+                    });
+                });
+
+                /* ---------------------------------------------------------
+                   4. PESTANYES INTERACTIVES: "CLIENT IDEAL"
+                   --------------------------------------------------------- */
+                const tabRep = document.getElementById('tab-rep');
+                const tabAporta = document.getElementById('tab-aporta');
+                const panelRep = document.getElementById('panel-rep');
+                const panelAporta = document.getElementById('panel-aporta');
+
+                const activateClientTab = (type) => {
+                    const isRep = type === 'rep';
+                    tabRep.setAttribute('aria-selected', String(isRep));
+                    tabAporta.setAttribute('aria-selected', String(!isRep));
+
+                    if (isRep) {
+                        tabRep.className = 'client-tab px-5 py-3 rounded-xl text-sm sm:text-base font-bold bg-ocean-600 text-white shadow-md transition-all';
+                        tabAporta.className = 'client-tab px-5 py-3 rounded-xl text-sm sm:text-base font-bold text-ocean-800 hover:bg-white transition-all';
+                        panelRep.classList.remove('hidden');
+                        panelRep.classList.add('grid');
+                        panelAporta.classList.add('hidden');
+                        panelAporta.classList.remove('grid');
+                    } else {
+                        tabAporta.className = 'client-tab px-5 py-3 rounded-xl text-sm sm:text-base font-bold bg-emerald-600 text-white shadow-md transition-all';
+                        tabRep.className = 'client-tab px-5 py-3 rounded-xl text-sm sm:text-base font-bold text-ocean-800 hover:bg-white transition-all';
+                        panelAporta.classList.remove('hidden');
+                        panelAporta.classList.add('grid');
+                        panelRep.classList.add('hidden');
+                        panelRep.classList.remove('grid');
+                    }
+                };
+
+                if (tabRep && tabAporta) {
+                    tabRep.addEventListener('click', () => activateClientTab('rep'));
+                    tabAporta.addEventListener('click', () => activateClientTab('aporta'));
+                }
+
+                /* ---------------------------------------------------------
+                   5. MODAL DE DETALLS DELS PRODUCTES I SERVEIS
+                   --------------------------------------------------------- */
+                const serviceDetails = {
+                    filtres: {
+                        badge: 'Solució 01 · Infraestructura',
+                        title: 'Instal·lació de filtres i dipòsits',
+                        description: 'No fabriquem aigua ni filtres des de zero: seleccionem els millors equips del mercat, els adaptem a les condicions de cada comunitat i en garantim el bon funcionament a llarg termini.',
+                        points: [
+                            'Aprovisionament rigorós: compra de filtres, dipòsits, canonades i eines comparant qualitat i preu.',
+                            'Adaptació i muntatge personalitzat segons les necessitats d’escoles, clíniques o zones rurals.',
+                            'Comprovació tècnica exhaustiva abans de posar el sistema en marxa.',
+                            'Calendari de manteniment periòdic i neteja per assegurar aigua potable cada dia.'
+                        ]
+                    },
+                    transport: {
+                        badge: 'Solució 02 · Logística i Emergències',
+                        title: 'Transport segur en emergències',
+                        description: 'Disposem d’una planificació logística preparada tant per fer arribar equipament d’instal·lació com per respondre amb rapidesa davant situacions de manca urgent d’aigua.',
+                        points: [
+                            'Trasllat protegit de filtres, dipòsits, canonades i eines fins a zones de difícil accés.',
+                            'Coordinació del lliurament i instal·lació directa sobre el terreny amb associacions locals.',
+                            'Subministrament d’emergència d’aigua potable en condicions sanitàries controlades.'
+                        ]
+                    },
+                    educacio: {
+                        badge: 'Solució 03 · Comunitat i Higiene',
+                        title: 'Educació, neteja i sanejament',
+                        description: 'La infraestructura només és sostenible si va acompanyada de coneixement. Treballem amb les comunitats per crear hàbits saludables i cuidar cada recurs hídric.',
+                        points: [
+                            'Tallers pràctics sobre hàbits d’higiene personal i conservació segura de l’aigua.',
+                            'Foment de l’ús responsable per evitar malbarataments i allargar la vida dels filtres.',
+                            'Acompanyament proper a escoles locals desprotegides i centres de salut vulnerables.'
+                        ]
+                    }
+                };
+
+                const modal = document.getElementById('service-modal');
+                const modalBadge = document.getElementById('modal-badge');
+                const modalTitle = document.getElementById('modal-title');
+                const modalDesc = document.getElementById('modal-description');
+                const modalList = document.getElementById('modal-list');
+                const closeModalBtn = document.getElementById('close-modal-btn');
+                const modalDoneBtn = document.getElementById('modal-done-btn');
+
+                const openModal = (key) => {
+                    const data = serviceDetails[key];
+                    if (!data || !modal) return;
+                    modalBadge.textContent = data.badge;
+                    modalTitle.textContent = data.title;
+                    modalDesc.textContent = data.description;
+                    modalList.innerHTML = data.points.map(item => `
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 shrink-0 rounded-full bg-sky-100 text-ocean-700 flex items-center justify-center text-xs font-bold mt-0.5">&#10003;</span>
+                            <span>${item}</span>
+                        </li>
+                    `).join('');
+                    modal.classList.remove('hidden');
+                    document.body.classList.add('overflow-hidden');
+                };
+
+                const closeModal = () => {
+                    if (!modal) return;
+                    modal.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                };
+
+                document.querySelectorAll('.open-service-modal').forEach(btn => {
+                    btn.addEventListener('click', () => openModal(btn.getAttribute('data-service')));
+                });
+                if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+                if (modalDoneBtn) modalDoneBtn.addEventListener('click', closeModal);
+                if (modal) {
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) closeModal();
+                    });
+                }
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+                        closeModal();
+                    }
+                });
+
+                /* ---------------------------------------------------------
+                   6. SELECTOR INTERACTIU D'ORGANITZACIÓ INTERNA (01 A 07)
+                   --------------------------------------------------------- */
+                const orgActivities = [
+                    {
+                        num: '01',
+                        title: 'Neteja i sanejament',
+                        summary: 'Assegurem que l’aigua sigui segura per al consum humà i promovem la salut pública a cada comunitat.',
+                        points: [
+                            { heading: 'Aigua segura per beure', desc: 'Garantim aigua en òptimes condicions sanitàries.' },
+                            { heading: 'Manteniment periòdic', desc: 'Instal·lem i netegem filtres i dipòsits regularment.' },
+                            { heading: 'Hàbits d’higiene', desc: 'Promovem l’ús responsable i sostenible de l’aigua.' }
+                        ]
+                    },
+                    {
+                        num: '02',
+                        title: 'Relació amb el client: física o online',
+                        summary: 'Mantenim una comunicació directa, transparent i propera tant amb qui rep l’ajuda com amb qui col·labora.',
+                        points: [
+                            { heading: 'Comunitats i centres', desc: 'Contacte directe amb escoles, clíniques i zones rurals.' },
+                            { heading: 'Donants i empreses', desc: 'Vincle directe amb persones, socis i institucions.' },
+                            { heading: 'Presencial i online', desc: 'Informem, resolem dubtes i expliquem com ajudar.' }
+                        ]
+                    },
+                    {
+                        num: '03',
+                        title: 'Activitat d’aprovisionament',
+                        summary: 'Gestionem la compra intel·ligent de tot el material necessari per treure el màxim rendiment a cada donació.',
+                        points: [
+                            { heading: 'Compra d’equipament', desc: 'Adquisició de filtres, dipòsits, canonades i eines.' },
+                            { heading: 'Selecció de proveïdors', desc: 'Comparació de preus i qualitat de proveïdors fiables.' },
+                            { heading: 'Gestió eficient', desc: 'Optimització de donacions i control de l’estoc disponible.' }
+                        ]
+                    },
+                    {
+                        num: '04',
+                        title: 'Activitat de fabricació',
+                        summary: 'El nostre model es basa en l’adaptació tècnica precisa i la verificació de qualitat sobre el terreny.',
+                        points: [
+                            { heading: '01 Sense producció pròpia', desc: 'No fabriquem aigua ni filtres des de zero.' },
+                            { heading: '02 Adaptació i muntatge', desc: 'Preparem i instal·lem equips adaptats a cada comunitat.' },
+                            { heading: '03 Comprovació tècnica', desc: 'Verifiquem el correcte funcionament final del sistema.' }
+                        ]
+                    },
+                    {
+                        num: '05',
+                        title: 'Activitat de planificació',
+                        summary: 'Abans d’actuar, analitzem a fons cada entorn per garantir que la intervenció sigui efectiva i duradora.',
+                        points: [
+                            { heading: 'Estudi previ', desc: 'Anàlisi detallada de les comunitats més necessitades.' },
+                            { heading: 'Recursos i ubicació', desc: 'Selecció d’ubicacions, materials i pressupost.' },
+                            { heading: 'Execució ordenada', desc: 'Organització clara de tasques i terminis d’execució.' }
+                        ]
+                    },
+                    {
+                        num: '06',
+                        title: 'Activitats administratives',
+                        summary: 'La transparència és la base de la confiança: registrem cada euro, factura i projecte amb rigor.',
+                        points: [
+                            { heading: 'Control econòmic', desc: 'Gestió de donacions, despeses, factures i compres.' },
+                            { heading: 'Proveïdors i socis', desc: 'Seguiment continu dels contactes amb col·laboradors.' },
+                            { heading: 'Ús transparent', desc: 'Registre accessible de projectes, pressupostos i documents.' }
+                        ]
+                    },
+                    {
+                        num: '07',
+                        title: 'Activitats de transport i distribució',
+                        summary: 'Portem els recursos allà on calen amb seguretat, tant en projectes planificats com en emergències.',
+                        points: [
+                            { heading: 'Trasllat d’equipament', desc: 'Portem filtres, dipòsits i eines fins al destí.' },
+                            { heading: 'Lliurament i muntatge', desc: 'Organitzem la instal·lació directa sobre el terreny.' },
+                            { heading: 'Transport d’emergència', desc: 'Subministrament segur d’aigua potable en urgències.' }
+                        ]
+                    }
+                ];
+
+                let activeOrgIndex = 0;
+                const orgSelector = document.getElementById('org-selector');
+                const orgStepBadge = document.getElementById('org-step-badge');
+                const orgStepLabel = document.getElementById('org-step-label');
+                const orgStepTitle = document.getElementById('org-step-title');
+                const orgStepSummary = document.getElementById('org-step-summary');
+                const orgStepPoints = document.getElementById('org-step-points');
+                const orgProgressText = document.getElementById('org-progress-text');
+                const orgProgressBar = document.getElementById('org-progress-bar');
+                const orgPrevBtn = document.getElementById('org-prev-btn');
+                const orgNextBtn = document.getElementById('org-next-btn');
+
+                const renderOrgSelector = () => {
+                    if (!orgSelector) return;
+                    orgSelector.innerHTML = orgActivities.map((act, idx) => {
+                        const isActive = idx === activeOrgIndex;
+                        return `
+                            <button type="button" role="tab" aria-selected="${isActive}" data-org-index="${idx}" class="org-tab-btn w-full text-left flex items-center gap-3.5 px-4 py-3.5 rounded-2xl border transition-all duration-200 ${
+                                isActive
+                                    ? 'bg-ocean-900 text-white border-ocean-900 shadow-lg shadow-ocean-900/15'
+                                    : 'bg-aqua-50/70 text-slate-700 border-sky-100 hover:bg-sky-50 hover:border-sky-300'
+                            }">
+                                <span class="w-9 h-9 shrink-0 rounded-xl font-display font-extrabold text-sm flex items-center justify-center ${
+                                    isActive ? 'bg-aqua-400 text-ocean-950' : 'bg-white text-ocean-700 border border-sky-200'
+                                }">${act.num}</span>
+                                <span class="font-semibold text-sm sm:text-base leading-snug">${act.title}</span>
+                            </button>
+                        `;
+                    }).join('');
+
+                    orgSelector.querySelectorAll('.org-tab-btn').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            activeOrgIndex = Number(btn.getAttribute('data-org-index'));
+                            updateOrgView();
+                        });
+                    });
+                };
+
+                const updateOrgView = () => {
+                    const current = orgActivities[activeOrgIndex];
+                    if (!current) return;
+                    renderOrgSelector();
+                    orgStepBadge.textContent = current.num;
+                    orgStepLabel.textContent = `Activitat ${current.num} de 07`;
+                    orgStepTitle.textContent = current.title;
+                    orgStepSummary.textContent = current.summary;
+                    orgStepPoints.innerHTML = current.points.map(pt => `
+                        <div class="rounded-2xl bg-white/10 border border-white/15 p-4 backdrop-blur-sm">
+                            <h4 class="font-bold text-cyan-200 text-sm mb-1.5">${pt.heading}</h4>
+                            <p class="text-xs sm:text-sm text-sky-50/90 leading-relaxed">${pt.desc}</p>
+                        </div>
+                    `).join('');
+
+                    const pct = ((activeOrgIndex + 1) / orgActivities.length) * 100;
+                    orgProgressText.textContent = `${activeOrgIndex + 1} / ${orgActivities.length}`;
+                    orgProgressBar.style.width = `${pct}%`;
+                };
+
+                if (orgPrevBtn && orgNextBtn) {
+                    orgPrevBtn.addEventListener('click', () => {
+                        activeOrgIndex = (activeOrgIndex - 1 + orgActivities.length) % orgActivities.length;
+                        updateOrgView();
+                    });
+                    orgNextBtn.addEventListener('click', () => {
+                        activeOrgIndex = (activeOrgIndex + 1) % orgActivities.length;
+                        updateOrgView();
+                    });
+                }
+                updateOrgView();
+
+                /* ---------------------------------------------------------
+                   7. SIMULADOR D'IMPACTE INTERACTIU (10€ - 500€)
+                   --------------------------------------------------------- */
+                const slider = document.getElementById('donation-slider');
+                const donationDisplay = document.getElementById('donation-display');
+                const metricLiters = document.getElementById('metric-liters');
+                const metricFamilies = document.getElementById('metric-families');
+                const metricFilters = document.getElementById('metric-filters');
+                const simulatorMsg = document.getElementById('simulator-message');
+                const presetBtns = document.querySelectorAll('.preset-btn');
+
+                let currentValues = { liters: 2000, families: 4, filters: 2 };
+                let animFrameId = null;
+
+                const animateMetrics = (targetLiters, targetFamilies, targetFilters) => {
+                    if (animFrameId) cancelAnimationFrame(animFrameId);
+                    const startValues = { ...currentValues };
+                    const duration = 280;
+                    const startTime = performance.now();
+
+                    const step = (now) => {
+                        const progress = Math.min(1, (now - startTime) / duration);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+
+                        const curLiters = Math.round(startValues.liters + (targetLiters - startValues.liters) * eased);
+                        const curFamilies = Math.round(startValues.families + (targetFamilies - startValues.families) * eased);
+                        const curFilters = Math.round(startValues.filters + (targetFilters - startValues.filters) * eased);
+
+                        metricLiters.textContent = curLiters.toLocaleString('ca-ES');
+                        metricFamilies.textContent = curFamilies.toLocaleString('ca-ES');
+                        metricFilters.textContent = curFilters.toLocaleString('ca-ES');
+
+                        if (progress < 1) {
+                            animFrameId = requestAnimationFrame(step);
+                        } else {
+                            currentValues = { liters: targetLiters, families: targetFamilies, filters: targetFilters };
+                        }
+                    };
+                    animFrameId = requestAnimationFrame(step);
+                };
+
+                const updateSimulator = (amount) => {
+                    const val = Math.max(10, Math.min(500, Number(amount) || 50));
+                    donationDisplay.textContent = `${val}€`;
+                    if (slider) slider.value = val;
+
+                    const targetLiters = val * 40;
+                    const targetFamilies = Math.max(1, Math.round(val / 12.5));
+                    const targetFilters = Math.max(1, Math.round(val / 25));
+
+                    animateMetrics(targetLiters, targetFamilies, targetFilters);
+
+                    // Missatge contextual dinàmic
+                    if (val < 40) {
+                        simulatorMsg.innerHTML = `Amb <strong>${val}€</strong> facilites aigua potable segura i materials bàsics d'higiene per a famílies vulnerables.`;
+                    } else if (val < 150) {
+                        simulatorMsg.innerHTML = `Amb <strong>${val}€</strong> contribuïm a subministrar aigua segura i realitzar manteniment de filtres en una escola o comunitat rural.`;
+                    } else if (val < 300) {
+                        simulatorMsg.innerHTML = `Amb <strong>${val}€</strong> impulsem la instal·lació completa de filtres adaptats i tallers d'educació en sanejament.`;
+                    } else {
+                        simulatorMsg.innerHTML = `Amb <strong>${val}€</strong> financem un equip complet de filtració, dipòsit i transport d'emergència per a tota una comunitat!`;
+                    }
+
+                    // Ressaltar botó predefinit actiu
+                    presetBtns.forEach(btn => {
+                        const isMatch = Number(btn.getAttribute('data-amount')) === val;
+                        btn.classList.toggle('bg-ocean-600', isMatch);
+                        btn.classList.toggle('text-white', isMatch);
+                        btn.classList.toggle('border-ocean-600', isMatch);
+                        btn.classList.toggle('bg-sky-50', !isMatch);
+                        btn.classList.toggle('text-ocean-900', !isMatch);
+                        btn.classList.toggle('border-sky-200', !isMatch);
+                    });
+                };
+
+                if (slider) {
+                    slider.addEventListener('input', (e) => updateSimulator(e.target.value));
+                }
+                presetBtns.forEach(btn => {
+                    btn.addEventListener('click', () => updateSimulator(btn.getAttribute('data-amount')));
+                });
+
+                /* ---------------------------------------------------------
+                   8. FORMULARI DE CONTACTE DEMOSTRATIU (SENSE ALERT)
+                   --------------------------------------------------------- */
+                const contactForm = document.getElementById('contact-form');
+                const formSuccessBanner = document.getElementById('form-success-banner');
+                const formSuccessText = document.getElementById('form-success-text');
+                const formErrorMsg = document.getElementById('form-error-msg');
+                const formResetBtn = document.getElementById('form-reset-btn');
+
+                if (contactForm) {
+                    contactForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const nameVal = document.getElementById('contact-name').value.trim();
+                        const emailVal = document.getElementById('contact-email').value.trim();
+                        const roleVal = document.getElementById('contact-role').value;
+                        const msgVal = document.getElementById('contact-message').value.trim();
+
+                        if (!nameVal || !emailVal || !emailVal.includes('@') || !msgVal) {
+                            formErrorMsg.textContent = 'Si us plau, completa tots els camps obligatoris amb un correu electrònic vàlid.';
+                            formErrorMsg.classList.remove('hidden');
+                            return;
+                        }
+
+                        formErrorMsg.classList.add('hidden');
+                        formSuccessText.textContent = `Gràcies, ${nameVal}! Hem simulat la recepció de la teva consulta com a "${roleVal}".`;
+                        contactForm.classList.add('hidden');
+                        formSuccessBanner.classList.remove('hidden');
+                    });
+                }
+
+                if (formResetBtn && contactForm) {
+                    formResetBtn.addEventListener('click', () => {
+                        contactForm.reset();
+                        formSuccessBanner.classList.add('hidden');
+                        contactForm.classList.remove('hidden');
+                    });
+                }
+            } catch (err) {
+                console.error('Error en inicialitzar la pàgina Aigua a Prop:', err);
+            }
+        });
+    </script>
+</body>
+</html>
