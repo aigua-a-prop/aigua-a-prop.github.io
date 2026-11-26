@@ -1,6 +1,6 @@
 # Aigua a Prop — L'aigua que t'acosta a la vida
 
-🌐 **Web oficial del projecte:** https://aigua-a-prop.github.io/web/
+🌐 **Web oficial del projecte:** https://aigua-a-prop.github.io/
 
 **Aigua a Prop** és un projecte acadèmic de 3r d'ESO (3r A) creat per **Yasser Akka** i **Daniel Soler** amb l'objectiu d'apropar l'aigua potable i segura a les comunitats que més ho necessiten.
 
